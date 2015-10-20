@@ -1,6 +1,6 @@
 {
-  "name": "Tope",
-  "version": "0.0.0",
+  "name": "robo_tope",
+  "version": "0.0.1",
   "private": true,
   "author": "Victor Perin <victor.perin@princiweb.com.br>",
   "description": "Robo tope! :)]",
@@ -18,10 +18,22 @@
     "hubot-scripts": "^2.16.2",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.4.0",
-    "ping": "^0.1.10",
-    "ping-stats": "^1.0.3"
+    "ping": "^0.1.10"
   },
   "engines": {
     "node": "0.10.x"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princiweb/robo_tope.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/princiweb/robo_tope/issues"
+  },
+  "homepage": "https://github.com/princiweb/robo_tope#readme"
 }
