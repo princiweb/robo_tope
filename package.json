@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "author": "Victor Perin <victor.perin@princiweb.com.br>",
-  "description": "Robo tope! :)]",
+  "description": "Robo tope! :)",
   "dependencies": {
     "hubot": "^2.16.0",
     "hubot-diagnostics": "0.0.1",
