@@ -18,13 +18,6 @@ module.exports = (robot) ->
   robot.hear /\bo objetivo\b/i, (res) ->
     res.send 'É A CONQUISTAAAA!!!'
 
-  robot.hear /ping (\S+)/i, (res) ->
-    host = res.match[1].replace(/.*?:\/\//g, "");
-    ping = require('ping')
-    ping.sys.probe host, (isAlive) ->
-      mensagem = if isAlive then 'O host ' + host + ' ta vivo!' else 'O HOST ' + host + ' TA OFFLINE, LIGA NA KINGHOST!!'
-      res.send mensagem
-
   #
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
