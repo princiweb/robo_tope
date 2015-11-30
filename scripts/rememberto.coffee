@@ -66,7 +66,7 @@ module.exports = (robot) ->
         else
           msg.send "Não consigo esquecer isso, acho que estou traumatizado..."
 
-  robot.respond /(me |eu |)lembr(e|a|e\-se)( o | )(me|eu|.*)( |)(que em|em|daqui(| a)) (\d+)([smhd]) (de|para|pra|que( el(e|a)| eu|)|tenho que|) (.*)/i, (msg) ->
+  robot.respond /(me |eu |)lembr(e|a|e\-se)( o | )(me|eu|\w*)( |)(que em|em|daqui(| a)) (\d+)([smhd]) (de|para|pra|que( el(e|a)| eu|)|tenho que|) (.*)/i, (msg) ->
     name = msg.match[4] || msg.match[1]
     at = msg.match[8]
     time = msg.match[9]
