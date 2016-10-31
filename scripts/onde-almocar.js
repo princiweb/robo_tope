@@ -22,10 +22,10 @@ module.exports = function (robot) {
       dialogo.addChoice(/(.*)/i, function (respostaUsuario) {
 
         const mensagem = respostaUsuario.match[0];
-        const regexDeVerificacaoSeFinaliou = /\W*(fim|(finaliz|termin|acab)(ar|ou)|(n(ã|a)o)?,?( ?é)? ?(s(ó|o))?( ?isso)?( ?mesmo)?)$/i;
+        const regexDeVerificacaoSeFinaliou = /\W*(n(ã|a)o|fim|(finaliz|termin|acab)(ar|ou|ei)|(s(ó|o)( isso)?)( mesmo)?)$/i;
 
         if (regexDeVerificacaoSeFinaliou.test(mensagem))
-          return respostaUsuario.reply(`vocês podem ir em ${respostaUsuario.random(locais)}`);
+          return respostaUsuario.reply(`Ok, então vocês podem ir em ${respostaUsuario.random(locais)}`);
 
         locais.push(mensagem);
         respostaUsuario.reply('ok, mais alguma preferência?');
