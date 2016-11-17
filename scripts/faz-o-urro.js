@@ -20,7 +20,7 @@
 module.exports = function (robot){
   robot.hear(/(faz o (\w*)ro)( \d+)?( \d+)?$/i, function (res){
     const tipoDeUrro = res.match[2];
-    const numeroDeUrros = res.match[3] || 10;
+    const numeroDeUrros = res.match[3] || 3;
     const delayEntreUrros = res.match[4] || 3000;
     let urros = 0;
 
