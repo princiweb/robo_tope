@@ -17,6 +17,8 @@
 //   victorperin
 'use strict';
 
+let urrosEmExecucao = [];
+
 module.exports = function (robot){
   robot.hear(/(faz o (\w*)ro)( \d+)?( \d+)?/i, function (res){
     const tipoDeUrro = res.match[2];
@@ -24,14 +26,18 @@ module.exports = function (robot){
     const delayEntreUrros = res.match[4] || 3000;
     let urros = 0;
 
-    const repetirACadaSegundo = setInterval(urrar, delayEntreUrros);
+    const urroIndex = (-1) + urrosEmExecucao.push(
+      setInterval(urrar, delayEntreUrros)
+    );
 
     function urrar (){
       res.send(`FAZ O ${tipoDeUrro.toUpperCase()}RO!`);
       urros++;
 
-      if(urros >= numeroDeUrros)
-        clearInterval(repetirACadaSegundo);
+      if(urros >= numeroDeUrros){
+        clearInterval(urrosEmExecucao[urroIndex]);
+        urrosEmExecucao.splice([urroIndex], 1);
+      }
     };
 
   });
