@@ -45,5 +45,6 @@ module.exports = function (robot){
   robot.hear(/put the (cookie|\w*ro) down,?( now)?/i, function (res){
     urrosEmExecucao.forEach(clearInterval);
     urrosEmExecucao = [];
+    res.send('Cookie putting the cookie down, now.');
   });
 };
