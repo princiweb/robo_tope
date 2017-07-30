@@ -2,7 +2,7 @@
   "name": "robo_tope",
   "version": "0.0.1",
   "private": true,
-  "author": "Victor Perin <victor.perin@princiweb.com.br>",
+  "author": "Victor Perin <me@victorperin.ninja>",
   "description": "Robo tope! :)",
   "dependencies": {
     "cron": "^1.0.9",
