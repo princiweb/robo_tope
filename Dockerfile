@@ -1,11 +1,12 @@
 FROM node:8.6-alpine
 MAINTAINER Victor Perin <me@victorperin.ninja>
 
-RUN mkdir /hubot
-RUN cd /hubot
-WORKDIR /hubot
+RUN mkdir /tope
+RUN cd /tope
+WORKDIR /tope
 
-COPY package.json /hubot/
-RUN npm install --only=prod
+RUN ls
+COPY package.json /tope/package.json
+RUN npm install
 
-COPY . /hubot
+COPY . /tope
