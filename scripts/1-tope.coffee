@@ -12,7 +12,7 @@ module.exports = (robot) ->
 
 
   robot.hear /\b(to+pe*|o que (vc|voc(ê|ê)|) (achou|acha))\b/i, (res) ->
-    topes = ['top!','tope!','TOOOPEEE!','TOOOPEEEEEEEEE!','Que tope mano! :)']
+    topes = ['top!','tope!','TOOOPEEE!','TOOOPEEEEEEEEE!','Que tope mano! :)', 'Topezera!', 'Tope na balada!']
     res.send res.random topes
 
   robot.hear /\bo objetivo\b/i, (res) ->
