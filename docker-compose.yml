@@ -1,0 +1,23 @@
+version: "2"
+
+volumes:
+  redis-tope:
+    external: true
+    driver: rancher-nfs
+
+services:
+
+  robo-tope:
+    build: .
+    image: victorperin/robo_tope
+    command: bin/hubot -a telegram -n RoboTope_bot
+    links:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis
+      - TELEGRAM_TOKEN=
+
+  redis:
+    image: redis:4-alpine
+    volumes:
+      - redis-tope:/data
