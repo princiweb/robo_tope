@@ -12,6 +12,8 @@ has, etc!
 [hubot]: http://hubot.github.com
 [generator-hubot]: https://github.com/github/generator-hubot
 
+<br/>
+
 ### Running Tope Locally
 
 You can test your hubot by running the following, however some plugins will not
@@ -34,6 +36,8 @@ Then you can interact with Tope by typing `Tope help`.
     Tope help - Displays all of the help commands that Tope knows about.
     ...
 
+<br/>
+
 ### Configuration
 
 A few scripts (including some installed by default) require environment
@@ -54,6 +58,8 @@ How to set environment variables will be specific to your operating system.
 Rather than recreate the various methods and best practices in achieving this,
 it's suggested that you search for a dedicated guide focused on your OS.
 
+<br/>
+
 ### Scripting
 
 An example script is included at `scripts/example.coffee`, so check it out to
@@ -64,7 +70,7 @@ the thing.
 
 [scripting-docs]: https://github.com/github/hubot/blob/master/docs/scripting.md
 
-### external-scripts
+#### • external-scripts
 
 There will inevitably be functionality that everyone will want. Instead of
 writing it yourself, you can use existing plugins.
@@ -86,7 +92,7 @@ To use a package, check the package's documentation, but in general it is:
 
 You can review `external-scripts.json` to see what is included by default.
 
-##### Advanced Usage
+#### • Advanced Usage
 
 It is also possible to define `external-scripts.json` as an object to
 explicitly specify which scripts from a package should be included. The example
@@ -108,7 +114,7 @@ to including all scripts.**
 
 [npmjs]: https://www.npmjs.com
 
-### hubot-scripts
+#### • hubot-scripts
 
 Before hubot plugin packages were adopted, most plugins were held in the
 [hubot-scripts][hubot-scripts] package. Some of these plugins have yet to be
@@ -120,6 +126,8 @@ extension as a double quoted string to the `hubot-scripts.json` file in this
 repo.
 
 [hubot-scripts]: https://github.com/github/hubot-scripts
+
+<br/>
 
 ##  Persistence
 
@@ -134,6 +142,8 @@ If you don't need any persistence feel free to remove the `hubot-redis-brain`
 from `external-scripts.json` and you don't need to worry about redis at all.
 
 [redistogo]: https://redistogo.com/
+
+<br/>
 
 ## Adapters
 
@@ -155,6 +165,8 @@ Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
 
 [hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
 
+<br/>
+
 ## Deployment
 
     % heroku create --stack cedar
@@ -172,6 +184,8 @@ You'll need to edit the `Procfile` to set the name of your hubot.
 More detailed documentation can be found on the [deploying hubot onto
 Heroku][deploy-heroku] wiki page.
 
+<br/>
+
 ### Deploying to UNIX or Windows
 
 If you would like to deploy to either a UNIX operating system or Windows.
@@ -182,6 +196,8 @@ hubot onto Windows][deploy-windows] wiki pages.
 [deploy-heroku]: https://github.com/github/hubot/blob/master/docs/deploying/heroku.md
 [deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
 [deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
+
+<br/>
 
 ## Campfire Variables
 
@@ -207,6 +223,8 @@ Add the subdomain hubot should connect to. If you web URL looks like
     % heroku config:add HUBOT_CAMPFIRE_ACCOUNT="mysubdomain"
 
 [hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
+
+<br/>
 
 ## Restart the bot
 
